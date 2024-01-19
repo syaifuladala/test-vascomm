@@ -1,0 +1,155 @@
+/* NAVBAR */
+nav {
+    background-color: white;
+    border-bottom: solid 2px #f9f9f9;
+}
+.nav-table {
+    margin: 0px 40px;
+}
+.nav-search {
+    position: relative;
+    display: inline-block;
+}
+.nav-input-search {
+    display: flex;
+    width: 662px;
+    padding: 6px 16px;
+    border: 0;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-search span {
+    border: 0;
+}
+.nav-login {
+    height: 40px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: white;
+    color: #41a0e4;
+    border: solid 1px #41a0e4;
+}
+.nav-register {
+    height: 40px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: #41a0e4;
+    color: white;
+    border: solid 1px #41a0e4;
+}
+
+/* CONTENT */
+.content {
+    padding: 0px 200px;
+}
+
+/* CAROUSEL */
+.carousel {
+    padding: 30px 0px;
+}
+
+/* PRODUCT AVAILABLE */
+.productcard {
+    border: none;
+    margin: 12px;
+}
+.products .available .card {
+    border: none;
+    width: 180px;
+}
+.products .available .card h5 {
+    color: var(--black, #1f1c17);
+    font-family: "Playfair Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: -0.42px;
+}
+.products .available .card img {
+    padding: 20px 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.products .available .card p {
+    color: var(--Primary, #41a0e4);
+    font-family: "SF Pro Display";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* FOOTER */
+footer {
+    border-top: solid 2px #f9f9f9;
+    padding-top: 85px;
+    margin-bottom: 100px;
+}
+footer .main-colomn {
+    padding: 0px 105px;
+    text-align: center;
+}
+footer .main-colomn img .logo {
+    width: 168px;
+    height: 27px;
+    flex-shrink: 0;
+}
+footer .main-colomn .description {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    color: var(--black, #1f1c17);
+    text-align: center;
+    font-family: "SF Pro Display";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    opacity: 0.5;
+}
+footer .socmed {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+footer ul {
+    list-style-type: none;
+    margin-left: -30px;
+}
+footer li {
+    margin-bottom: 10px;
+    font-family: "SF Pro Display";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3px;
+}
+footer li a {
+    color: var(--black, #0e0d0b);
+    font-style: normal;
+    text-decoration: none;
+}
+footer h4 {
+    font-family: "Playfair Display";
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.9px;
+}

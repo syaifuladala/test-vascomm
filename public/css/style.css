@@ -50,6 +50,9 @@ nav {
     color: white;
     border: solid 1px #41a0e4;
 }
+nav a {
+    text-decoration: none;
+}
 
 /* CONTENT */
 .content {
@@ -92,6 +95,20 @@ nav {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+.products .available button {
+    height: 40px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: white;
+    color: #41a0e4;
+    border: solid 1px #41a0e4;
 }
 
 /* FOOTER */

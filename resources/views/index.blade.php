@@ -7,6 +7,7 @@
     <title>Vascomm</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -29,8 +30,12 @@
                 </td>
                 <td>
                     <div class="nav-button">
-                        <button class="nav-login">MASUK</button>
-                        <button class="nav-register">DAFTAR</button>
+                        <a href="/admin/login">
+                            <button class="nav-login">MASUK</button>
+                        </a>
+                        <a href="/admin/register">
+                            <button class="nav-register">DAFTAR</button>
+                        </a>
                     </div>
                 </td>
             </tr>
@@ -51,130 +56,19 @@
             <div class="available">
                 <h3>Produk Tersedia</h3>
                 <div class="list">
-                    <div class="row">
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 productcard">
-                            <div class="card">
-                                <center>
-                                    <img src="image/product1.png" class="card-img-top" alt="product">
-                                </center>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">IDR x.xxx.980</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" id="productList">
+                        <!-- Product List -->
+                        <!-- Product List -->
+                        <!-- Product List -->
+                        <!-- Product List -->
+                        <!-- Product List -->
                     </div>
                 </div>
+
+                <center>
+                    <button id="loadMore">Lihat lebih banyak</button>
+                </center>
+
             </div>
         </div>
 
@@ -222,6 +116,57 @@
 
         </div>
     </footer>
+
+    <!-- jquery -->
+    <script>
+        function loadProducts(skip, take, search) {
+            $.ajax({
+                url: '/api/products',
+                type: 'GET',
+                data: {
+                    skip: skip,
+                    take: take,
+                    search: search
+                },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.code === 200) {
+                        displayProducts(response.data.products);
+                    } else {
+                        console.error('Gagal memuat produk:', response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error:', status, error);
+                }
+            });
+        }
+
+        function displayProducts(products) {
+            var productList = $('#productList');
+
+            $.each(products, function(index, product) {
+                var productCard = $('<div class="col-md-2 productcard">');
+                var card = $('<div class="card">');
+
+                card.append('<center><img src="' + product.image + '" class="card-img-top" alt="product"></center>');
+                card.append('<div class="card-body"><h5 class="card-title">' + product.name + '</h5><p class="card-text">IDR ' + product.price + '</p></div>');
+
+                productCard.append(card);
+                productList.append(productCard);
+            });
+        }
+
+        var skip = 0;
+        var take = 10;
+
+        $('#loadMore').on('click', function() {
+            skip += take;
+            loadProducts(skip, take, '');
+        });
+
+        loadProducts(skip, take, '');
+    </script>
 
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
